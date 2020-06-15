@@ -37,7 +37,7 @@ predict_image.py is the script that runs in a loop trying to detect the hand pos
 
 ## Next Steps
 
-Compile the model tflite and try to use directly in mediapipe.
+Convert this to a tflite model and try to use directly in mediapipe and use from raspberry pi.
 
 
 Thanks to 
