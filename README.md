@@ -1,5 +1,6 @@
-# gesture_recognition
+# Gesture Recognition 
 
+This is to train and predict the custom gestures for smart home control. This can easily be extended for other purposes. 
 
 [![Youtube link](https://img.youtube.com/vi/NarInyCUr_g/0.jpg)](https://www.youtube.com/embed/NarInyCUr_g)
 
