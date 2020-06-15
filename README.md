@@ -4,7 +4,8 @@
 [![Youtube link](https://img.youtube.com/vi/NarInyCUr_g/0.jpg)](https://www.youtube.com/embed/NarInyCUr_g)
 
 Used the MediaPipe hand tracking for getting the landmark positional information.
-Followed the instructions in this [repo](https://github.com/madelinegannon/example-mediapipe-udp) to stream it to a python application using protocol buffer as I cannot code c++
+
+Followed the instructions in this [repo](https://github.com/madelinegannon/example-mediapipe-udp) to stream it to a python application using protocol buffers as I cannot code in c++
 
 ## Training
 
