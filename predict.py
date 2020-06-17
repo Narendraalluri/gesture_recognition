@@ -43,7 +43,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-# {'turnonlights': array([0., 0., 0., 1.]), 
-# 'turnonfan': array([0., 0., 1., 0.]), 
-# 'turnofffan': array([1., 0., 0., 0.]), 
-# 'turnofflights': array([0., 1., 0., 0.])}
