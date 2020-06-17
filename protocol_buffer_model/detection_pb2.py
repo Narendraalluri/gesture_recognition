@@ -11,7 +11,7 @@ from google.protobuf import symbol_database as _symbol_database
 _sym_db = _symbol_database.Default()
 
 
-import location_data_pb2 as mediapipe_dot_framework_dot_formats_dot_location__data__pb2
+import protocol_buffer_model.location_data_pb2 as mediapipe_dot_framework_dot_formats_dot_location__data__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(

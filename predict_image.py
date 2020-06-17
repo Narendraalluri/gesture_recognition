@@ -10,11 +10,11 @@ from keras.models import load_model
 import time
 import pickle 
 
-pkl_file = open('image_label_encoder.pkl', 'rb')
+pkl_file = open('model/image_label_encoder.pkl', 'rb')
 le_images = pickle.load(pkl_file) 
 pkl_file.close()
 
-pkl_file = open('gesture_label_encoder.pkl', 'rb')
+pkl_file = open('model/gesture_label_encoder.pkl', 'rb')
 le_gestures = pickle.load(pkl_file) 
 pkl_file.close()
 
@@ -30,8 +30,8 @@ handTrackingData = WrapperHandTracking()
 
 def main():
     
-    image_model = load_model('model_images.h5')
-    gesture_model = load_model('model.h5')
+    image_model = load_model('model/model_images.h5')
+    gesture_model = load_model('model/model.h5')
 
     while True:
         data, addr = sock.recvfrom(1024)

@@ -18,10 +18,10 @@ handTrackingData = WrapperHandTracking()
 
 def main():
     
-    new_model = load_model('model.h5')
+    new_model = load_model('model/model.h5')
     new_model.summary()
 
-    lines = [];
+    lines = []
     count = 0
     while count < 80:
         data, addr = sock.recvfrom(1024)

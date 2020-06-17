@@ -10,7 +10,7 @@ from google.protobuf import symbol_database as _symbol_database
 
 _sym_db = _symbol_database.Default()
 
-import rasterization_pb2 as mediapipe_dot_framework_dot_formats_dot_annotation_dot_rasterization__pb2
+import protocol_buffer_model.rasterization_pb2 as mediapipe_dot_framework_dot_formats_dot_annotation_dot_rasterization__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(

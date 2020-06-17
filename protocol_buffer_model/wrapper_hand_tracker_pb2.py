@@ -11,9 +11,9 @@ from google.protobuf import symbol_database as _symbol_database
 _sym_db = _symbol_database.Default()
 
 
-import landmark_pb2 as mediapipe_dot_framework_dot_formats_dot_landmark__pb2
-import rect_pb2 as mediapipe_dot_framework_dot_formats_dot_rect__pb2
-import detection_pb2 as mediapipe_dot_framework_dot_formats_dot_detection__pb2
+import protocol_buffer_model.landmark_pb2 as mediapipe_dot_framework_dot_formats_dot_landmark__pb2
+import protocol_buffer_model.rect_pb2 as mediapipe_dot_framework_dot_formats_dot_rect__pb2
+import protocol_buffer_model.detection_pb2 as mediapipe_dot_framework_dot_formats_dot_detection__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(

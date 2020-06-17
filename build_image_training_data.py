@@ -1,7 +1,7 @@
 #!/usr/bin/python
 import socket
 import argparse
-from wrapper_hand_tracker_pb2 import WrapperHandTracking
+from protocol_buffer_model.wrapper_hand_tracker_pb2 import WrapperHandTracking
 import numpy as np
 import matplotlib.pyplot as plt
 import os

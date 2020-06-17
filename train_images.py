@@ -88,8 +88,8 @@ def main():
     score, acc = model.evaluate(x_test,y_test,batch_size=1,verbose=0)
     print('Test performance: accuracy={0}, loss={1}'.format(acc, score))
     model.build()
-    model.save('model_images.h5')
-    fix_layer0('model_images.h5', [None, 21, 3], 'float32')
+    model.save('model/model_images.h5')
+    fix_layer0('model/model_images.h5', [None, 21, 3], 'float32')
     print(label_mapping)
 
 
