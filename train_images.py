@@ -72,7 +72,7 @@ def main():
     flat_list = [item for sublist in result for item in sublist]
 
     random.shuffle(flat_list)
-    output = open('image_label_encoder.pkl', 'wb')
+    output = open('model/image_label_encoder.pkl', 'wb')
     pickle.dump(label_encoder, output)
     output.close()
     model = build_model(len(labels))

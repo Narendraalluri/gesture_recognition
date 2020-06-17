@@ -73,7 +73,7 @@ def main():
     for i in range(len(labels)):
         label_mapping[labels[i]] = onehot_encoded[i]
 
-    output = open('gesture_label_encoder.pkl', 'wb')
+    output = open('model/gesture_label_encoder.pkl', 'wb')
     pickle.dump(label_encoder, output)
     output.close()
 

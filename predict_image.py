@@ -1,6 +1,6 @@
 #!/usr/bin/python
 import socket
-from wrapper_hand_tracker_pb2 import WrapperHandTracking
+from protocol_buffer_model.wrapper_hand_tracker_pb2 import WrapperHandTracking
 import numpy as np
 import os
 import sys
