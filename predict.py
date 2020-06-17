@@ -23,7 +23,7 @@ def main():
 
     lines = []
     count = 0
-    while count < 80:
+    while count < 40:
         data, addr = sock.recvfrom(1024)
         handTrackingData.ParseFromString(data)
         if len(handTrackingData.landmarks.landmark) == 21 and handTrackingData.landmarks.landmark[0].x > 0.0:
@@ -38,7 +38,7 @@ def main():
             count = count + 1
     input = np.array(lines)
     print(input.shape)
-    yhat = new_model.predict(input.reshape(1, 80, 21, 3))
+    yhat = new_model.predict(input.reshape(1, 40, 21, 3))
     print(yhat)
 
 if __name__ == "__main__":

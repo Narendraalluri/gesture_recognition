@@ -21,7 +21,7 @@ def fix_layer0(filename, batch_input_shape, dtype):
         f.attrs['model_config'] = json.dumps(model_config).encode('utf-8')
 
 # Example
-input_shape = (80, 21, 3)
+input_shape = (40, 21, 3)
 
 def build_model(label):
     model = Sequential()
@@ -91,12 +91,12 @@ def main():
     x_test = np.array([x for (x, y) in test])
     y_test = np.array([y for (x, y) in test])
     model.build()
-    history=model.fit(x_train,y_train,epochs=100,batch_size=1,validation_data=(x_test,y_test))
+    history=model.fit(x_train,y_train,epochs=50,batch_size=1,validation_data=(x_test,y_test))
     score, acc = model.evaluate(x_test,y_test,batch_size=1,verbose=0)
     print('Test performance: accuracy={0}, loss={1}'.format(acc, score))
     model.build()
     model.save('model/model.h5')
-    fix_layer0('model/model.h5', [None, 80, 21, 3], 'float32')
+    fix_layer0('model/model.h5', [None, 40, 21, 3], 'float32')
     print(label_mapping)
 
 
