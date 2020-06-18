@@ -49,8 +49,6 @@ def process_file(label, file):
     lines = f.readlines()
     result_list = [[word.split(' ') for word in line.split(',')] for line in lines]
     result = np.array(result_list)
-    print(result)
-    print(file, result.shape, padded.shape)
     min1st = min(result.shape[0],padded.shape[0])
     min2nd = min(result.shape[1],padded.shape[1])
     min3rd = min(result.shape[2],padded.shape[2])
@@ -85,13 +83,17 @@ def main():
     model = build_model(len(labels))
 
     flat_list = [ (x, label_mapping[y]) for (x, y) in flat_list ]
-    train, test = train_test_split(flat_list, test_size=0.2)
-    x_train = np.array([x for (x, y) in train])
-    y_train = np.array([y for (x, y) in train])
-    x_test = np.array([x for (x, y) in test])
-    y_test = np.array([y for (x, y) in test])
+    train1, test = train_test_split(flat_list, test_size=0.2)
+    train, valid = train_test_split(train1, test_size=0.2)
+
+    x_train, y_train = np.array([x for (x, y) in train]), np.array([y for (x, y) in train])
+    x_test, y_test = np.array([x for (x, y) in test]), np.array([y for (x, y) in test])
+    x_valid, y_valid = np.array([x for (x, y) in valid]), np.array([y for (x, y) in valid])
+
+    print(y_train)
+
     model.build()
-    history=model.fit(x_train,y_train,epochs=20,batch_size=1,validation_data=(x_test,y_test))
+    history=model.fit(x_train,y_train,epochs=20,batch_size=1,validation_data=(x_valid,y_valid))
     score, acc = model.evaluate(x_test,y_test,batch_size=1,verbose=0)
     print('Test performance: accuracy={0}, loss={1}'.format(acc, score))
     model.build()
