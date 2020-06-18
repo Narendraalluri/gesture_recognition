@@ -27,8 +27,8 @@ def build_model(label):
     model = Sequential()
     # define CNN model
     model.add(InputLayer(input_shape=input_shape))
-    model.add(TimeDistributed(Conv1D(filters=32, kernel_size=2, activation='relu')))
-    model.add(TimeDistributed(MaxPooling1D(pool_size=2)))
+    model.add(TimeDistributed(Conv1D(filters=3, kernel_size=2, activation='relu')))
+    # model.add(TimeDistributed(MaxPooling1D(pool_size=2)))
     model.add(TimeDistributed(Flatten()))
     # define LSTM model
     model.add(Dropout(0.2))
@@ -91,7 +91,7 @@ def main():
     x_test = np.array([x for (x, y) in test])
     y_test = np.array([y for (x, y) in test])
     model.build()
-    history=model.fit(x_train,y_train,epochs=50,batch_size=1,validation_data=(x_test,y_test))
+    history=model.fit(x_train,y_train,epochs=20,batch_size=1,validation_data=(x_test,y_test))
     score, acc = model.evaluate(x_test,y_test,batch_size=1,verbose=0)
     print('Test performance: accuracy={0}, loss={1}'.format(acc, score))
     model.build()

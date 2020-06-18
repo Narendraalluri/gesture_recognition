@@ -32,9 +32,9 @@ model.h5 is built using train.py and trained on gestures which are sequence of h
 
 ## Prediction Loop
 
-predict_image.py is the script that runs in a loop trying to detect the hand pose(using model_images.h5) to start the gesture recognition(using model.h5) by collecting a sequence of 80 poses after the start.
+predict_gestures.py is the script that runs in a loop trying to detect the hand pose(using model_images.h5) to start the gesture recognition(using model.h5) by collecting a sequence of 80 poses after the start.
 
-```python predict_image.py```
+```python predict_gestures.py```
 
 ## Next Steps
 
